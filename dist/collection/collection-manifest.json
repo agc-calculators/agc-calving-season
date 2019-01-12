@@ -1,0 +1,127 @@
+{
+  "components": [
+    {
+      "tag": "agc-calving-season",
+      "dependencies": [],
+      "componentClass": "AgcCalvingSeason",
+      "componentPath": "components/agc-calving-season/agc-calving-season.js",
+      "styles": {},
+      "props": [
+        {
+          "name": "mode",
+          "type": "String",
+          "attr": "mode"
+        },
+        {
+          "name": "socket",
+          "type": "String",
+          "attr": "socket"
+        },
+        {
+          "name": "tract",
+          "type": "String",
+          "attr": "tract"
+        }
+      ],
+      "states": [
+        {
+          "name": "cache"
+        },
+        {
+          "name": "currentStep"
+        },
+        {
+          "name": "results"
+        },
+        {
+          "name": "submitted"
+        }
+      ],
+      "events": [
+        {
+          "event": "agcCalculated"
+        },
+        {
+          "event": "agcStepChanged"
+        }
+      ]
+    },
+    {
+      "tag": "agc-calving-season-inputs",
+      "dependencies": [],
+      "componentClass": "AgcCalvingSeasonInputs",
+      "componentPath": "components/agc-calving-season-inputs/agc-calving-season-inputs.js",
+      "styles": {},
+      "props": [
+        {
+          "name": "socket",
+          "type": "String",
+          "attr": "socket"
+        }
+      ],
+      "states": [
+        {
+          "name": "data"
+        },
+        {
+          "name": "ready"
+        }
+      ]
+    },
+    {
+      "tag": "agc-calving-season-progress",
+      "dependencies": [],
+      "componentClass": "AgcCalvingSeasonProgress",
+      "componentPath": "components/agc-calving-season-progress/agc-calving-season-progress.js",
+      "styles": {},
+      "props": [
+        {
+          "name": "socket",
+          "type": "String",
+          "attr": "socket"
+        }
+      ],
+      "states": [
+        {
+          "name": "currentStep"
+        }
+      ]
+    },
+    {
+      "tag": "agc-calving-season-results",
+      "dependencies": [],
+      "componentClass": "AgcCalvingSeasonResults",
+      "componentPath": "components/agc-calving-season-results/agc-calving-season-results.js",
+      "styles": {},
+      "props": [
+        {
+          "name": "socket",
+          "type": "String",
+          "attr": "socket"
+        }
+      ],
+      "states": [
+        {
+          "name": "data"
+        },
+        {
+          "name": "ready"
+        }
+      ]
+    },
+    {
+      "tag": "agc-calving-season-results-placeholder",
+      "dependencies": [],
+      "componentClass": "AgcCalvingSeasonResultsPlaceholder",
+      "componentPath": "components/agc-calving-season-results-placeholder/agc-calving-season-results-placeholder.js",
+      "styles": {}
+    }
+  ],
+  "collections": [],
+  "compiler": {
+    "name": "@stencil/core",
+    "version": "0.15.2",
+    "typescriptVersion": "2.9.2"
+  },
+  "bundles": []
+}

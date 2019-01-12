@@ -1,0 +1,42 @@
+/*! Built with http://stenciljs.com */
+import { h } from '../agc-calving-season.core.js';
+
+const addDays = (dt, days) => {
+    if (typeof dt === 'string') {
+        dt = new Date(dt);
+    }
+    var newDate = new Date(dt);
+    var nextDate = dt.getDate() + parseInt(days);
+    newDate.setDate(nextDate);
+    return newDate;
+};
+const inputDate = (date) => {
+    var local = new Date(date);
+    local.setMinutes(date.getMinutes() - date.getTimezoneOffset());
+    return local.toJSON().slice(0, 10);
+};
+const formatDate = (date, sep = "/") => {
+    let newDate = new Date(date);
+    var dd = newDate.getDate();
+    var mm = newDate.getMonth() + 1;
+    var y = newDate.getFullYear();
+    return `${mm}${sep}${dd}${sep}${y}`;
+};
+const validate = (form, name) => {
+    let el = form.querySelector(`[name="${name}"]`);
+    let message = form.querySelector(`[data-validates="${name}"`);
+    if (!el.checkValidity()) {
+        if (el.className.indexOf('invalid') === -1) {
+            el.className += " invalid";
+        }
+        message.style.display = 'block';
+        return false;
+    }
+    else {
+        el.className = el.className.replace(" invalid", "");
+        message.style.display = 'none';
+    }
+    return true;
+};
+
+export { validate as a, addDays as b, inputDate as c, formatDate as d };
